@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1" style="font-size: 50px;"></div>
+    <button onclick="setInterval(inc,100)">Increase</button>
+    <button onclick="setInterval(dec,100)">Decrease</button>
+    <button onclick="stop()">Stop</button>
+    <script>
+    /*Write code to perform the tasks as asked below. (Ref*)
+    Add three buttons.
+    Increase button to increase the fonts. It should stop increasing the fonts when the font size reaches to 200px
+     or stop button is clicked.
+    Stop button to stop increasing or decreasing the fonts.
+    Decrease button to decrease the fonts. It should stop decreasing the fonts when the font size reaches to 20px or 
+    stop button is clicked
+    Increasing/decreasing interval is of 100 ms. With Default font size = 50px*/   
+    let a=document.getElementById('div1')
+    a.innerHTML='hello'    
+    a.style.color='blue'
+    let fs=50
+    function inc(){
+        if(fs<200){
+            fs+=1
+            a.style.fontSize=fs+' px'
+        }
+    }
+    function dec(){
+        if(fs>20){
+            fs-=1
+            a.style.fontSize=fs+'px'
+        }
+    }
+    function stop(){
+        clearInterval(Interval)
+    }
+    
+      
+    </script>
+</body>
+</html>
